@@ -12,7 +12,7 @@ for (n = 0; n < 10; n++)
 {
 	printf("%d", n);
 }
-printf('\n');
+putchar('\n');
 return (0);
 }
 
