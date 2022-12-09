@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
+/**
+ *main - Entry point for code that gives variable n a random number
+ *
+ * Return: Always 0(Success)
+ */
 
 /* betty style doc for function main goes there */
 int main(void)
