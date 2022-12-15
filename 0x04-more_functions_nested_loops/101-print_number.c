@@ -37,7 +37,7 @@ void print_number(int n)
 		{
 			_putchar(num % 10 + '0');
 			num = -1;
-		}
+i		}
 		else
 		{
 			_putchar((num / m % 10) + '0');
