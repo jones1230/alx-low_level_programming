@@ -36,5 +36,6 @@ int _isupper(int c)
 			return (rv);
 		}
 	}
+	return (0);
 }
 
