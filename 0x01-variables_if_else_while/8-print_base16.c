@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - print the letters of the alphabet
+ * main - print the base16
  *
- * Description: print the letters of the alphabet except e, q
  *
  * Return: Always 0 (Success)
  */
