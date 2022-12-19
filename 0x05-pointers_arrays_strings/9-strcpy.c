@@ -3,14 +3,13 @@
 
 
 /**
+ * _strcpy - copy string to another string
  *
- *  * *_strcpy - copy string to another string
+ * @dest: pointer
  *
- *   * @dest: pointer
+ * @src: pointer
  *
- *    * @src: pointer
- *
- *     * Return: numbers dest
+ * Return: numbers dest
  *
  */
 
