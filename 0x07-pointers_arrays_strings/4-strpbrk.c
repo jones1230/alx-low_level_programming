@@ -6,28 +6,29 @@
  * @accept: an input character with to locate into string s
  * Return: returns pointer to c position
  */
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-	int count = 0, flag;
-	char *start = accept;
+	int i;
+	int j = 0;
+	int check = 0;
+	char *p = NULL;
 
-	while (*s)
+	for (i = 0; s[i]; i++)
 	{
-		flag = 0;
-		while (*accept)
+		for (j = 0; accept[j]; j++)
 		{
-			if (*accept == *s)
+			check = 0;
+			if (s[i] == accept[j])
 			{
-				count++;
-				flag = 1;
+				p = (s + i);
+				check = 1;
 				break;
 			}
-			accept++;
 		}
-		s++;
-		accept = start;
-		if (flag == 0)
+		if (check == 1)
+		{
 			break;
+		}
 	}
-	return (count);
+	return (p);
 }
