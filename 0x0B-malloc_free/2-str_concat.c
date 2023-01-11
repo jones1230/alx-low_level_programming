@@ -19,9 +19,9 @@ char *str_concat(char *s1, char *s2)
 	vars2 = 0;
 
 	if (s1 == NULL)
-		s1[] = '\0';
+		s1[0] = '\0';
 	if (s1 == NULL)
-		s2[] = '\0';
+		s2[0] = '\0';
 
 	for (i = 0; s1[i] != '\0'; i++)
 		vars1++;
