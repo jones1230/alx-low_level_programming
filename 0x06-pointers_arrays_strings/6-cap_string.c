@@ -32,4 +32,9 @@ char *cap_string(char *str)
 			else if (str[i] > 64 && str[i] < 91)
 				trigger = 0;
 			else if (str[i] > 47 && str[i] < 58)
+				trigger = 0;
+		}
+	}
+	return (str);
+}
 
