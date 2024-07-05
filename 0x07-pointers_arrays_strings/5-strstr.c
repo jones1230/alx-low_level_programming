@@ -1,28 +1,56 @@
-#include "main.h"
+#include "holberton.h"
+#include <stdlib.h>
+
+#define true 1
+#define false 0
+#define bool int
 
 /**
- * _strpbrk - searches a string for any of a set of bytes.
- * @s: string to be scanned
- * @accept: string containing characters to match
- * Description: This function finds the first character in the string s
- * that matches any character specified in accept.
- * This does not include terminating null-characters.
- * Return: pointer to the byte in s that matches one of the bytes in accept
+ * _strstr - locates a substring
+ * @haystack: string to be searched
+ * @needle: substring to be found
+ * Return: pointer to substring or NULL if not found
  */
-char *_strpbrk(char *s, char *accept)
+char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
+	char *start = haystack;
+	char *_needle = needle;
+	bool found =  false;
 
-	for (i = 0; s[i] != '\0'; i++)
+	if (!*_needle)
+		return (haystack);
+
+	while (*haystack)
 	{
-		for (j = 0; accept[j] != '\0'; j++)
+		if (*haystack == *needle)
 		{
-			if (s[i] == accept[j])
+			found = true;
+			start = haystack;
+			while (*_needle)
 			{
-				return (s + i);
+				if (*haystack != *_needle)
+				{
+					found = false;
+					_needle = needle;
+					break;
+				}
+
+				haystack++;
+				_needle++;
 			}
 		}
+
+		if (found)
+		{
+			break;
+		}
+
+		haystack++;
+	}
+	if (found)
+	{
+		return (start);
 	}
 
-	return (0);
+	return (NULL);
 }
