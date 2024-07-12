@@ -1,1 +1,1 @@
-Repository for ALX Low Level Programming
+Low Level Programming
